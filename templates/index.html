@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlaskApp</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="../static/ajax.js" type="text/javascript"></script>
+</head>
+<body>
+    <h1>Sensor Management System</h1>
+    <h2>Current sensors:</h2>
+    {% for key, sensor in sensors.items() %}
+        <p><b>{{ key }}</b><br>
+            <ul>
+                <li class="{{ key }}">{{ sensor.value }} {{ sensor.unit }}</li>
+                <li>{{ sensor.measurementTimeMs }}</li>
+            </ul>
+        </p>
+    {% endfor %}
+</body>
+</html>
