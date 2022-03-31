@@ -19,6 +19,7 @@ public class TopicSample implements MessageListener {
     public void onMessage(Message message) {
         ObjectMapper mapper = new ObjectMapper();
         mapper.enable(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT);
+        mapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
 
         try {
             String json = mapper.writeValueAsString(message.getMessageObject());

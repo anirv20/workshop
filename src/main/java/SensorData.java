@@ -7,10 +7,10 @@ public class SensorData {
 
     public SensorData() {}
 
-    public SensorData(long measurementTimeMs, String id, float value, String unit)
+    public SensorData(long measurementTimeMs, String sensorId, float value, String unit)
     {
         this.measurementTimeMs = measurementTimeMs;
-        this.sensorId = id;
+        this.sensorId = sensorId;
         this.value = value;
         this.unit = unit;
     }
