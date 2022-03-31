@@ -10,7 +10,7 @@ public class SensorSystemImpl implements SensorSystem {
 
     public SensorSystemImpl()
     {
-        this.co2SensorAdapter = new CO2SensorAdapter("Room - 1 - co2");
+        this.co2SensorAdapter = new CO2SensorAdapter("Room - 1 - CO2");
         this.temperatureSensorAdapter = new TemperatureSensorAdapter("Room - 1 - Temperature");
     }
 

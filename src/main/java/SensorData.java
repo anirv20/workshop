@@ -5,6 +5,15 @@ public class SensorData {
     private float value;
     private String unit;
 
+    public SensorData() {}
+
+    public SensorData(long measurementTimeMs, String id, float value, String unit)
+    {
+        this.measurementTimeMs = measurementTimeMs;
+        this.sensorId = id;
+        this.value = value;
+        this.unit = unit;
+    }
 
     public long getMeasurementTimeMs() {
         return measurementTimeMs;
@@ -38,11 +47,15 @@ public class SensorData {
         this.unit = unit;
     }
 
-    public SensorData(long measurementTimeMs, String id, float value, String unit)
-    {
-        this.measurementTimeMs = measurementTimeMs;
-        this.sensorId = id;
-        this.value = value;
-        this.unit = unit;
+    @Override
+    public String toString(){
+        return "SensorData{" +
+                "measurementTimeMs:" + measurementTimeMs +
+                ", sensorId:" + sensorId + '\'' +
+                ", value:" + value + '\'' +
+                ", unit:" + unit + '\'' +
+                '}';
     }
+
+
 }
